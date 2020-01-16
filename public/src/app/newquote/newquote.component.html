@@ -1,0 +1,14 @@
+<div *ngIf="author">
+  <h3>Create a New Quote</h3>
+  <div *ngIf="error">
+    <p class="text-danger">{{error.quotes.message}}</p>
+  </div>
+  <form (submit)=onSubmitNewQuote()>
+    <div class="form-group">
+      <label for="quote.quote">Quote: </label>
+      <input type="text" class="form-control" name="quote.quote" [(ngModel)]="quote.quote">
+    </div>
+    <button [routerLink]="['/quotes', author._id ]" class="btn btn-dark mr-3">Cancel</button>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>

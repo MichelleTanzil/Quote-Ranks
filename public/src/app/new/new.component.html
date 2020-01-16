@@ -1,0 +1,12 @@
+<h3>Create a New Author</h3>
+<div *ngIf="error">
+  <p class="text-danger">{{error.author.message}}</p>
+</div>
+<form (submit)=onSubmitNewAuthor()>
+  <div class="form-group">
+    <label for="title">Author: </label>
+    <input type="text" class="form-control" name="title" [(ngModel)]="newAuthor.author">
+  </div>
+  <button [routerLink]="['/']" class="btn btn-dark mr-3">Cancel</button>
+  <button type="submit" class="btn btn-dark">Submit</button>
+</form>

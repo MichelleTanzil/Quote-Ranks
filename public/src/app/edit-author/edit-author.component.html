@@ -1,0 +1,15 @@
+<div *ngIf='selectedAuthor'>
+  <h3>Edit {{selectedAuthor.author}}</h3>
+  <div *ngIf="error">
+    <p class="text-danger">{{error.author.message}}</p>
+  </div>
+  <form (submit)=onSubmitEditAuthor()>
+    <div class="form-group">
+      <label for="title">Author: </label>
+      <input type="text" class="form-control" name="title" [(ngModel)]="selectedAuthor.author"
+        value="{{selectedAuthor.title}}">
+    </div>
+    <button [routerLink]="['/']" class="btn btn-dark mr-3">Cancel</button>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>
