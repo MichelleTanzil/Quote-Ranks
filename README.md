@@ -14,6 +14,7 @@ Create an application where users view authors and their famous quotes.
 
 * Use backend validations to ensure that all author names and quotes are at least three characters long. If the user does not pass validations, display an error message.
 
+![Screenshot](wireframe.png)
 
 ## Objectives
 
