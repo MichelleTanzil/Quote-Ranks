@@ -45,8 +45,8 @@ export class NewquoteComponent implements OnInit {
         console.log("Error: ", this.error);
       } else {
         console.log("Quote is being created");
-        this.router.navigate(["/quotes", this.id]);
       }
     });
+    this.router.navigate(["/quotes", this.id]);
   }
 }
